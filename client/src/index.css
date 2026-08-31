@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: #C89B3C;
+  color: #FBF6EC;
+}
+
+/* Visible keyboard focus everywhere, including custom controls */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid #C89B3C;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.container-shell {
+  @apply mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8;
+}
+
+.section-eyebrow {
+  @apply inline-flex items-center gap-2 text-[13px] font-semibold tracking-[0.22em] uppercase text-gold-dark;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2 rounded-full bg-maroon px-6 py-3.5 text-[15px] font-semibold text-ivory shadow-card transition-all duration-200 hover:bg-maroon-dark hover:shadow-card-hover active:scale-[0.98];
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-maroon px-6 py-3 text-[15px] font-semibold text-maroon transition-all duration-200 hover:bg-maroon hover:text-ivory active:scale-[0.98];
+}
+
+.btn-whatsapp {
+  @apply inline-flex w-full items-center justify-center gap-2.5 rounded-full bg-[#25D366] px-6 py-4 text-base font-bold text-white shadow-[0_10px_30px_-10px_rgba(37,211,102,0.6)] transition-all duration-200 hover:bg-[#1FBD5A] active:scale-[0.98] sm:w-auto;
+}
+
+.card-surface {
+  @apply rounded-2xl border border-gold/15 bg-white shadow-card transition-all duration-300;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Skeleton loading shimmer for images/cards */
+.skeleton {
+  background: linear-gradient(90deg, #F3E1D0 25%, #f8ede1 37%, #F3E1D0 63%);
+  background-size: 400% 100%;
+  animation: shimmer 2.5s ease-in-out infinite;
+}
