@@ -77,31 +77,37 @@ const Navbar = () => {
           )}
         </div>
 
-        <button
-          type="button"
-          className="flex h-10 w-10 items-center justify-center rounded-full border border-maroon/30 md:hidden"
-          onClick={() => setMenuOpen((v) => !v)}
-          aria-expanded={menuOpen}
-          aria-label="Toggle menu"
-        >
-          <span className="relative block h-3.5 w-4.5">
-            <span
-              className={`absolute left-0 top-0 h-0.5 w-4.5 bg-maroon transition-transform ${
-                menuOpen ? "translate-y-[6px] rotate-45" : ""
-              }`}
-            />
-            <span
-              className={`absolute left-0 top-[6px] h-0.5 w-4.5 bg-maroon transition-opacity ${
-                menuOpen ? "opacity-0" : ""
-              }`}
-            />
-            <span
-              className={`absolute left-0 top-[12px] h-0.5 w-4.5 bg-maroon transition-transform ${
-                menuOpen ? "-translate-y-[6px] -rotate-45" : ""
-              }`}
-            />
-          </span>
-        </button>
+     <button
+  type="button"
+  className="flex h-10 w-10 items-center justify-center rounded-full border border-maroon/30 md:hidden"
+  onClick={() => setMenuOpen((v) => !v)}
+  aria-expanded={menuOpen}
+  aria-label="Toggle menu"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className="h-5 w-5 text-maroon transition-transform duration-200"
+  >
+    {menuOpen ? (
+      <>
+        <line x1="6" y1="6" x2="18" y2="18" />
+        <line x1="18" y1="6" x2="6" y2="18" />
+      </>
+    ) : (
+      <>
+        <line x1="4" y1="6" x2="20" y2="6" />
+        <line x1="4" y1="12" x2="20" y2="12" />
+        <line x1="4" y1="18" x2="20" y2="18" />
+      </>
+    )}
+  </svg>
+</button>
       </nav>
 
       {menuOpen && (
