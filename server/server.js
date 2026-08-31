@@ -22,9 +22,15 @@ const app = express();
 
 // --- Security & core middleware ---
 app.use(helmet());
+
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://hira-cooking.vercel.app",
+];
+
 app.use(
   cors({
-    origin: process.env.CLIENT_URL || "http://localhost:5173",
+    origin: allowedOrigins,
     credentials: true,
   })
 );
