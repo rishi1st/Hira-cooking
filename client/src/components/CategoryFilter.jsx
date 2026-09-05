@@ -24,7 +24,14 @@ const CategoryFilter = ({ categories, active, onChange, counts = {}, totalCount 
       className="sticky z-30 -mx-5 bg-ivory/95 px-5 py-3 backdrop-blur sm:static sm:mx-0 sm:bg-transparent sm:px-0 sm:py-0 sm:backdrop-blur-0"
       style={{ top: "var(--navbar-height, 64px)" }}
     >
-      <div className="scrollbar-none flex snap-x gap-2.5 overflow-x-auto pb-1 sm:flex-wrap sm:justify-center">
+      <div className="flex flex-wrap
+    items-center justify-center
+    gap-2
+    max-h-[35vh]
+    overflow-y-auto
+    pr-1
+    sm:max-h-none
+    sm:overflow-visible">
         <button type="button" onClick={() => onChange("all")} className={pillClass(active === "all")}>
           {t("menu_category_all")}
           {typeof totalCount === "number" && (
