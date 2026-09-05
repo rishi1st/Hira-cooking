@@ -7,11 +7,11 @@ const translations = {
     nav_contact: "संपर्क करें",
     nav_cta: "अभी पूछताछ करें",
 
-    hero_eyebrow: "शादी और उत्सव कैटरिंग",
+    hero_eyebrow: "हर उत्सव के लिए प्रीमियम कैटरिंग",
     hero_title_1: "हर उत्सव को",
     hero_title_2: "यादगार बनाएं",
     hero_subtitle:
-      "पारंपरिक स्वाद और आधुनिक प्रस्तुति के साथ शादी, सगाई और बड़े आयोजनों के लिए संपूर्ण कैटरिंग सेवा। एक हज़ार मेहमानों तक, बिना किसी समझौते के स्वाद के साथ।",
+      "शादी, सगाई, जन्मदिन, सालगिरह, गृह प्रवेश और कॉर्पोरेट पार्टियों तक — हर मौके के लिए संपूर्ण कैटरिंग सेवा, पारंपरिक स्वाद और आधुनिक प्रस्तुति के साथ। एक हज़ार मेहमानों तक, बिना किसी समझौते के स्वाद के साथ।",
     hero_cta_primary: "मेनू देखें",
     hero_cta_secondary: "व्हाट्सऐप पर बात करें",
     hero_stat_events: "सफल आयोजन",
@@ -19,9 +19,9 @@ const translations = {
     hero_stat_years: "वर्षों का अनुभव",
 
     about_eyebrow: "हमारे बारे में",
-    about_title: "स्वाद जो पीढ़ियों से चला आ रहा है",
+    about_title: "हर उत्सव का स्वाद, एक ही भरोसेमंद नाम",
     about_body:
-      "हम शादी, सगाई, जन्मदिन और सभी पारिवारिक उत्सवों के लिए ऑन-साइट कैटरिंग सेवा प्रदान करते हैं। हमारे अनुभवी रसोइये पारंपरिक भारतीय व्यंजनों को शुद्धता और प्रेम के साथ तैयार करते हैं — चाहे आयोजन 50 मेहमानों का हो या 5000 का।",
+      "शादी हो, सगाई हो, जन्मदिन हो, सालगिरह हो या कोई कॉर्पोरेट आयोजन — हम हर तरह के उत्सव के लिए ऑन-साइट कैटरिंग सेवा प्रदान करते हैं। हमारे अनुभवी रसोइये पारंपरिक भारतीय व्यंजनों को शुद्धता और प्रेम के साथ तैयार करते हैं — चाहे आयोजन 50 मेहमानों का हो या 5000 का।",
     about_point_1: "100% शुद्ध शाकाहारी व स्वच्छ रसोई",
     about_point_2: "अनुभवी और प्रशिक्षित रसोइयों की टीम",
     about_point_3: "बड़े आयोजनों के लिए समय पर सेवा",
@@ -37,6 +37,8 @@ const translations = {
     menu_selected: "चयनित",
     menu_empty: "इस श्रेणी में अभी कोई व्यंजन उपलब्ध नहीं है",
     menu_veg: "शुद्ध शाकाहारी",
+    menu_load_more: "और व्यंजन देखें",
+    menu_back_to_top: "ऊपर जाएं",
 
     how_eyebrow: "आसान प्रक्रिया",
     how_title: "सिर्फ़ 3 आसान चरणों में बुकिंग",
@@ -94,11 +96,11 @@ const translations = {
     nav_contact: "Contact",
     nav_cta: "Enquire Now",
 
-    hero_eyebrow: "Wedding & Event Catering",
+    hero_eyebrow: "Premium Catering for Every Occasion",
     hero_title_1: "Make Every Celebration",
     hero_title_2: "Truly Memorable",
     hero_subtitle:
-      "Complete on-site catering for weddings, engagements and large events — traditional flavours with modern presentation. From intimate gatherings to a thousand guests, without compromise.",
+      "From weddings and engagements to birthdays, anniversaries, housewarmings and corporate events — complete catering for every occasion, with traditional flavours and modern presentation. From intimate gatherings to a thousand guests, without compromise.",
     hero_cta_primary: "Explore Menu",
     hero_cta_secondary: "Chat on WhatsApp",
     hero_stat_events: "Events Catered",
@@ -106,9 +108,9 @@ const translations = {
     hero_stat_years: "Years of Experience",
 
     about_eyebrow: "About Us",
-    about_title: "Flavours Passed Down Through Generations",
+    about_title: "One Trusted Name, For Every Celebration",
     about_body:
-      "We provide on-site catering for weddings, engagements, birthdays and every family celebration. Our experienced chefs prepare traditional Indian dishes with care and purity — whether the event is for 50 guests or 5,000.",
+      "Wedding or engagement, birthday or anniversary, a housewarming or a corporate event — we provide on-site catering for every kind of celebration. Our experienced chefs prepare traditional Indian dishes with care and purity — whether the event is for 50 guests or 5,000.",
     about_point_1: "100% pure vegetarian & hygienic kitchen",
     about_point_2: "Experienced, trained team of chefs",
     about_point_3: "On-time service for large-scale events",
@@ -124,6 +126,8 @@ const translations = {
     menu_selected: "Selected",
     menu_empty: "No dishes available in this category yet",
     menu_veg: "Pure Vegetarian",
+    menu_load_more: "Load more dishes",
+    menu_back_to_top: "Back to top",
 
     how_eyebrow: "Simple Process",
     how_title: "Book in Just 3 Easy Steps",

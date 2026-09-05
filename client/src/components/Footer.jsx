@@ -16,7 +16,7 @@ const Footer = ({ settings }) => {
           <div>
             <div className="mb-3 flex items-center gap-2.5">
               <span className="flex h-10 w-10 items-center justify-center rounded-full bg-gold text-lg font-display font-bold text-maroon-dark">
-                श
+               श्री
               </span>
               <span className="font-display text-xl font-semibold">
                 {businessName || "Shubh Bhoj Catering"}

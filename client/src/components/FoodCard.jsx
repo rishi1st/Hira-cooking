@@ -1,9 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, memo } from "react";
 import { useLanguage } from "../context/LanguageContext.jsx";
 import { useSelection } from "../context/SelectionContext.jsx";
+import { optimizeImageUrl } from "../utils/optimizeImage.js";
 import VideoModal from "./VideoModal.jsx";
 
-const FoodCard = ({ food }) => {
+// Wrapped in React.memo: with 1000+ cards on screen, a state change in one
+// card (or in the parent's search/category state) should never force every
+// other card to re-render and re-diff its image and buttons.
+const FoodCard = memo(({ food }) => {
   const { t, language } = useLanguage();
   const { isSelected, toggleFood } = useSelection();
   const [showVideo, setShowVideo] = useState(false);
@@ -13,21 +17,27 @@ const FoodCard = ({ food }) => {
   const primaryName = language === "hi" ? food.hindiName : food.englishName;
   const secondaryName = language === "hi" ? food.englishName : food.hindiName;
 
+  // A card in a 3-column grid is roughly 350-420px wide on desktop and up
+  // to ~420px on mobile; 480px covers retina without shipping a full photo.
+  const cardImageUrl = optimizeImageUrl(food.imageUrl, { width: 480, quality: 65 });
+
   return (
     <>
       <div
-        className={`card-surface group relative flex flex-col overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-card-hover ${
+        className={`card-surface group relative flex flex-col overflow-hidden transition-transform duration-300 animate-fadeUp hover:-translate-y-1 hover:shadow-card-hover ${
           selected ? "ring-2 ring-gold" : ""
         }`}
       >
         <div className="relative aspect-[4/3] w-full overflow-hidden bg-blush">
           {!imgLoaded && <div className="skeleton absolute inset-0" />}
           <img
-            src={food.imageUrl}
+            src={cardImageUrl}
             alt={primaryName}
             loading="lazy"
+            decoding="async"
+            fetchPriority="low"
             onLoad={() => setImgLoaded(true)}
-            className={`h-full w-full object-cover transition-transform duration-500 group-hover:scale-105 ${
+            className={`h-full w-full object-cover transition-all duration-500 group-hover:scale-105 ${
               imgLoaded ? "opacity-100" : "opacity-0"
             }`}
           />
@@ -101,6 +111,8 @@ const FoodCard = ({ food }) => {
       )}
     </>
   );
-};
+});
+
+FoodCard.displayName = "FoodCard";
 
 export default FoodCard;

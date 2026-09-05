@@ -47,9 +47,9 @@ const AdminLayout = ({ children, title }) => {
           <div className="flex items-center justify-between px-6 py-5">
             <div className="flex items-center gap-2.5">
               <span className="flex h-9 w-9 items-center justify-center rounded-full bg-gold text-maroon-dark font-display font-bold">
-                श
+                श्री
               </span>
-              <span className="font-display text-lg font-semibold">Shubh Bhoj</span>
+              <span className="font-display text-lg font-semibold">Hira cooking Bhandar</span>
             </div>
             <button
               type="button"
